@@ -1,0 +1,8 @@
+import rodriguez.ciro.drools.model.Order;
+
+rule "Type01"
+when
+orderObject: Order(cardType == "01" && price > 10000)
+then
+orderObject.setDiscount(10.0);
+end;
